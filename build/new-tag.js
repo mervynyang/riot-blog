@@ -9,7 +9,7 @@ const name = args[1]
 const dir = path.join(__dirname, '..', `src/${type}/${name}`)
 const tag =
 `<${name}>
-  <link rel="stylesheet" href="./${name}.css">
+  <link rel="stylesheet" href="./${name}.scss">
 
   <script>
   </script>

@@ -12,6 +12,7 @@
     "smart": "node build/new-tag.js pages"
   },
   "dependencies": {
+    "normalize.css": "^7.0.0",
     "riot": "^3.7.3",
     "riot-hot-reload": "^1.0.0",
     "riot-route": "^3.1.2"

@@ -1,3 +1,0 @@
-<page-head>
-
-</page-head>
