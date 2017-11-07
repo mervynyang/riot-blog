@@ -1,8 +1,11 @@
-import 'riot-hot-reload'
-import 'normalize.css/normalize.css'
-
+import env from './config/env'
 import './RiotControl'
 import './stores'
 import './riotTags'
 import './router'
-import './styles/main.css'
+import './styles/main.scss'
+
+if (!env.isProduction) {
+  require('riot-hot-reload')
+}
+

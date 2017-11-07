@@ -9,16 +9,17 @@ const name = args[1]
 const dir = path.join(__dirname, '..', `src/${type}/${name}`)
 const tag =
 `<${name}>
-  <link rel="stylesheet" href="./${name}.scss">
+  <div>${name}</div>
 
   <script>
+    import './${name}.scss'
   </script>
 </${name}>`
 
 fs.mkdir(dir, 0777, function(err) {
   if (err) throw err
 
-  fs.writeFile(`${dir}/${name}.css`, '', 'utf8', function(err) {
+  fs.writeFile(`${dir}/${name}.scss`, '', 'utf8', function(err) {
     if (err) throw err
   })
 

@@ -1,0 +1,22 @@
+.pagination {
+  text-align: center;
+  color: #777b81;
+
+  span {
+    line-height: 20px;
+  }
+
+  .iconfont {
+    font-size: 20px;
+    padding: 0 .5em;
+    cursor: pointer;
+
+    &.arrowright {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      color: #313438;
+    }
+  }
+}

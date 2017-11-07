@@ -1,5 +1,39 @@
+.page-head {
+  padding: 40px 0;
+  background-color: #FFF;
+  box-shadow: 0 1px 1px rgba(21,21,20,0.1);
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .page-nav {
+  flex: 1;
+  justify-content: flex-end;
+  text-align: right;
   li {
     display: inline-block;
   }
+  a {
+    padding-left: 20px;
+    color: #444;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.page-banner {
+  flex: 1;
+}
+
+.page-description {
+  color: #999
+}
+
+.page-title {
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 15px;
 }

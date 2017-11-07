@@ -1,0 +1,31 @@
+@mixin clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin center_block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// 自动省略
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 多行省略
+@mixin multi_ellipsis($line: 2){
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
