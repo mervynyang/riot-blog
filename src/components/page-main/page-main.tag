@@ -1,10 +1,10 @@
 <page-main>
-  <main class="wrapper page-main">
+  <div class="container page-main">
     <card type="image"></card>
     <card></card>
     <card></card>
     <card></card>
-  </main>
+  </div>
 
   <script>
     import './page-main.scss'

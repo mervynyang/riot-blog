@@ -15,7 +15,8 @@
     "normalize.css": "^7.0.0",
     "riot": "^3.7.3",
     "riot-hot-reload": "^1.0.0",
-    "riot-route": "^3.1.2"
+    "riot-route": "^3.1.2",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

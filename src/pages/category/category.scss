@@ -1,0 +1,28 @@
+.category {
+  padding-bottom: 50px;
+}
+
+.post-list {
+  padding: 0 24px;
+}
+
+.post-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #e7e7e7;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+
+    a {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  time {
+    color: #9b9fa6;
+  }
+}

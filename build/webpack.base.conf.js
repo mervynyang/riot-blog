@@ -28,6 +28,7 @@ module.exports = {
       'styles': resolve('src/styles'),
       'config': resolve('src/config'),
       'utils': resolve('src/utils'),
+      'api': resolve('src/api'),
     }
   },
   module: {

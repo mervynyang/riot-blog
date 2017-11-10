@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 import env from './config/env'
 import './RiotControl'
 import './stores'
@@ -8,4 +9,3 @@ import './styles/main.scss'
 if (!env.isProduction) {
   require('riot-hot-reload')
 }
-

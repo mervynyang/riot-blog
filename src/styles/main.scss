@@ -8,12 +8,11 @@
 }
 
 body {
-  font-family: "Hiragino Sans GB", 华文细黑, STHeiti, 微软雅黑, "Microsoft YaHei", SimHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, Arial, Helvetica, "Microsoft YaHei", sans-serif;
 
   line-height: 1.5;
   color: #777b81;
   font-size: 14px;
-
 }
 
 ul {
@@ -46,6 +45,7 @@ a {
 .main {
   padding: 10px 0;
   background: #efefef;
+  min-height: calc(100vh - 216px);
 
   @include respond(pad) {
     padding: 60px 0;

@@ -7,6 +7,7 @@
   <page-footer></page-footer>
 
   <script>
+
   </script>
 </home>
 
