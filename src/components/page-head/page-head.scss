@@ -33,7 +33,11 @@
 }
 
 .page-title {
-  color: #222;
+  color: $primary;
   margin-top: 0;
   margin-bottom: 15px;
+  cursor: pointer;
+  &:hover {
+    color: $primary_active;
+  }
 }
