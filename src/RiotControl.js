@@ -11,13 +11,11 @@ const RiotControl = {
 _RiotControlApi.forEach((api) => {
   RiotControl[api] = function apiHandler(...args) {
     this._stores.forEach((el) => {
-      // console.log(el[api])
       el[api].apply(null, args)
     })
   }
 })
 
-// console.log(RiotControl)
 // since riot is auto loaded by ProvidePlugin, merge the control into the riot object
 riot.control = RiotControl
 

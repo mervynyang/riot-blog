@@ -10,23 +10,35 @@
         </div>
       </div>
       <ul class="page-nav">
-        <li>
-          <a href="#">导航内容</a>
-        </li>
-        <li>
-          <a href="#">导航内容</a>
-        </li>
-        <li>
-          <a href="#">导航内容</a>
-        </li>
-        <li>
-          <a href="#">More themes</a>
+        <li each="{ category in categories }" no-reorder>
+          <span onclick="{ categorySelect.bind(this, category.id) }">
+            { category.name }
+          </span>
         </li>
       </ul>
     </div>
   </div>
 
   <script>
+  import getCategories from 'api/category'
   import './page-head.scss'
+
+  const allCate = [{
+    id: 'all',
+    name: '所有文章'
+  }]
+
+  this.mixin('controlMixin')
+
+  getCategories()
+    .then((categories) => {
+      this.update({
+        categories: allCate.concat(categories)
+      })
+    })
+
+  this.categorySelect = (categoryId) => {
+    riot.control.trigger('cateSelected', categoryId)
+  }
   </script>
 </page-head>

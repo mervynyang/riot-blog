@@ -15,8 +15,9 @@
   li {
     display: inline-block;
   }
-  a {
+  span {
     padding-left: 20px;
+    cursor: pointer;
     color: #444;
     &:hover {
       text-decoration: underline;
