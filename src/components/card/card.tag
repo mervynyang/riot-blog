@@ -1,23 +1,28 @@
 <card>
   <article class="card">
-    <div class="card-content" if="{ opts.cover === '' }">
-      <h2 class="card-title">{ opts.title}</h2>
+    <a class="card-content" if="{ opts.post.cover === '' }" href="{ url + post.uuid }">
+      <h2 class="card-title">{ opts.post.title}</h2>
       <div class="card-body">
-        <!-- {} -->
+        { opts.post.brief }
       </div>
-    </div>
-    <figure class="card-img-wrap" if="{ opts.cover !== '' }">
+    </a>
+    <figure class="card-img-wrap" if="{ opts.post.cover !== '' }">
       <img src="https://picsum.photos/300/300" alt="">
     </figure>
     <div class="card-footer">
-      <time>{ opts.publish_at }</time>
-      <span class="tag"><i class="iconfont icon-label_fill"></i>{ opts.category_name }</span>
+      <time>{ opts.post.publish_at }</time>
+      <span class="tag"><i class="iconfont icon-label_fill"></i>{ opts.post.category_name }</span>
     </div>
   </article>
 
   <script>
+    import route from 'riot-route'
     import './card.scss'
 
-    console.log(this.opts)
+    this.goPost = (uuid) => {
+      route(`post?id=${uuid}`)
+    }
+
+    this.url = `${location.origin}/#/post?id=`
   </script>
 </card>

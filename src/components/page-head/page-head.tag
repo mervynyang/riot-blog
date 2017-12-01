@@ -20,6 +20,7 @@
   </div>
 
   <script>
+  import route from 'riot-route'
   import getCategories from 'api/category'
   import './page-head.scss'
 
@@ -30,6 +31,10 @@
 
   this.mixin('controlMixin')
 
+  const queryId = route.query().cate
+
+  riot.control.trigger('cateSelected', queryId || 'all')
+
   getCategories()
     .then((categories) => {
       this.update({
@@ -39,6 +44,7 @@
 
   this.categorySelect = (categoryId) => {
     riot.control.trigger('cateSelected', categoryId)
+    route(`home?cate=${categoryId}`)
   }
   </script>
 </page-head>

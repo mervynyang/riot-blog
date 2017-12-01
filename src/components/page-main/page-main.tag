@@ -1,6 +1,6 @@
 <page-main>
   <div class="container page-main">
-    <card type="image" each="{ post in posts }" data="{ post }"></card>
+    <card each="{ post in posts }" post="{ post }"></card>
   </div>
 
   <script>

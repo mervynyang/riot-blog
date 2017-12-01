@@ -1,4 +1,5 @@
 import 'whatwg-fetch'
+import './libs/highlight.pack'
 import env from './config/env'
 import './RiotControl'
 import './stores'
