@@ -4,15 +4,18 @@ class PostStore {
   constructor() {
     riot.observable(this)
 
-    this.posts = []
+    this.postsQueryData = {
+      post: [],
+      count: 0,
+    }
     this.postHtml = ''
   }
 
-  onCateSelected(categoryId) {
-    return postApi.getPostsByCate(categoryId)
+  onPostQuery(categoryId, page, pageSize) {
+    return postApi.getPostsByCate(categoryId, page, pageSize)
       .then((res) => {
         if (res.code === 1) {
-          this.posts = res.data
+          this.postsQueryData = res.data
         }
       })
   }
@@ -25,15 +28,14 @@ class PostStore {
         }
       })
   }
-
 }
 
 const instance = new PostStore()
 
-instance.on('cateSelected', (categoryId) => {
-  instance.onCateSelected(categoryId)
+instance.on('postQuery', (categoryId, page, pageSize) => {
+  instance.onPostQuery(categoryId, page, pageSize)
     .then(() => {
-      instance.trigger('postsCateChanged', instance.posts)
+      instance.trigger('postsListChanged', instance.postsQueryData)
     })
 })
 

@@ -12,6 +12,11 @@
     cursor: pointer;
     color: $primary;
 
+    &.disabled {
+      color: $primary_active;
+      cursor: not-allowed;
+    }
+
     &.arrowright {
       transform: rotate(180deg);
     }

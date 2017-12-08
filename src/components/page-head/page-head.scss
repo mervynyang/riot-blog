@@ -20,7 +20,10 @@
     cursor: pointer;
     color: #444;
     &:hover {
-      text-decoration: underline;
+      color: $primary;
+    }
+    &.nav-active {
+      color: $primary;
     }
   }
 }

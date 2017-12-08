@@ -11,7 +11,9 @@
       </div>
       <ul class="page-nav">
         <li each="{ category in categories }" no-reorder>
-          <span onclick="{ categorySelect.bind(this, category.id) }">
+          <span
+            onclick="{ categorySelect.bind(this, category.id) }"
+            class="{ nav-active: category.id == queryId }">
             { category.name }
           </span>
         </li>
@@ -22,6 +24,7 @@
   <script>
   import route from 'riot-route'
   import getCategories from 'api/category'
+  import storage from 'utils/storage'
   import './page-head.scss'
 
   const allCate = [{
@@ -29,11 +32,10 @@
     name: '所有文章'
   }]
 
-  this.mixin('controlMixin')
+  const sessionCateId = storage.session.get('categoryId')
+  this.queryId =  route.query().cate || sessionCateId || 'all'
 
-  const queryId = route.query().cate
-
-  riot.control.trigger('cateSelected', queryId || 'all')
+  riot.control.trigger('postQuery', this.queryId)
 
   getCategories()
     .then((categories) => {
@@ -43,7 +45,8 @@
     })
 
   this.categorySelect = (categoryId) => {
-    riot.control.trigger('cateSelected', categoryId)
+    storage.session.set('categoryId', categoryId)
+    riot.control.trigger('postQuery', categoryId)
     route(`home?cate=${categoryId}`)
   }
   </script>

@@ -1,10 +1,10 @@
 <post>
   <page-head></page-head>
-  <loading></loading>
   <main class="main">
     <div class="container">
       <div class="post-content">
         <article class="post-main markdown-body" id="markdownBody">
+          <loading show="{ showLoading }"></loading>
         </article>
         <div class="post-footer">
           <comment></comment>
@@ -18,7 +18,10 @@
     import route from 'riot-route'
     import './post.scss'
 
+    window.scrollTo(0, 0)
+
     this.html = ''
+    this.showLoading = true
 
     const id = route.query().id
     const div = document.createElement('div')
@@ -32,6 +35,9 @@
           document.querySelectorAll('#markdownBody pre').forEach((block) => {
             hljs.highlightBlock(block)
           })
+
+          this.showLoading = false
+          this.update()
         }
       })
   </script>
