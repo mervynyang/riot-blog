@@ -1,6 +1,20 @@
 @import "./markdown.css";
 @import "./atom-one-light.css";
 
+.container.post-container {
+  padding: 0;
+
+  @include respond(pad) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include respond(pc) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .post-content {
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(21, 21, 20, 0.1);
@@ -10,7 +24,7 @@
 .post-main {
   position: relative;
   min-height: 300px;
-  padding: 40px 40px 20px;
+  padding: 20px;
 
   @include respond(pad) {
     padding: 70px 80px 60px;

@@ -17,7 +17,7 @@
     import route from 'riot-route'
     import './pagination.scss'
 
-    const PAGE_SIZE = 9
+    const PAGE_SIZE = 12
     const count = opts.count
     const categoryId = route.query().cate
 

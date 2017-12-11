@@ -1,4 +1,13 @@
 .container.page-main {
-  padding: 0;
   padding-bottom: 50px;
+
+  @include respond(pad) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include respond(pc) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

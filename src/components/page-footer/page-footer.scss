@@ -1,7 +1,15 @@
 .page-footer {
   background: #292c2f;
   color: #777b81;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
   font-size: 12px;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #c5c0c0;
+  }
 }

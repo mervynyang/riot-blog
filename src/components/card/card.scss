@@ -4,14 +4,23 @@
 
 .card {
   display: inline-block;
-  width: 300px;
+  width: 100%;
   height: 330px;
-  margin-left: 20px;
   margin-bottom: 20px;
   background-color: #fff;
   box-shadow: 0 1px 1px rgba(21,21,20,0.1);
   border-radius: 3px;
   cursor: pointer;
+
+  @include respond(pad) {
+    width: 300px;
+    margin-left: 20px;
+  }
+
+  @include respond(pc) {
+    width: 300px;
+    margin-left: 20px;
+  }
 }
 
 .card-content {
@@ -53,12 +62,40 @@
 }
 
 .card-img-wrap {
+  display: block;
   padding: 10px;
   height: 290px;
+  position: relative;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  &:hover {
+    .card-img-title {
+      display: flex;
+    }
+  }
+}
+
+.card-img-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+
+  @include respond(pc) {
+    display: none;
   }
 }

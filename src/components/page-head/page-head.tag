@@ -18,6 +18,21 @@
           </span>
         </li>
       </ul>
+
+      <!-- mobile nav  -->
+      <i class="iconfont icon-menu" onclick="{ toggleMenu }"></i>
+      <ul class="{ 'm-page-nav': true, expanded: menuExpand }">
+        <li
+          each="{ category in categories }"
+          no-reorder
+          onclick="{ categorySelect.bind(this, category.id) }"
+          class="{ nav-active: category.id == queryId }"
+        >
+          { category.name }
+        </li>
+      </ul>
+      <!-- end mobile nav  -->
+
     </div>
   </div>
 
@@ -34,6 +49,7 @@
 
   const sessionCateId = storage.session.get('categoryId')
   this.queryId =  route.query().cate || sessionCateId || 'all'
+  this.menuExpand = false
 
   riot.control.trigger('postQuery', this.queryId)
 
@@ -49,5 +65,10 @@
     riot.control.trigger('postQuery', categoryId)
     route(`home?cate=${categoryId}`)
   }
+
+  this.toggleMenu = () => {
+    this.menuExpand = !this.menuExpand
+  }
+
   </script>
 </page-head>

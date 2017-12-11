@@ -32,7 +32,6 @@ a {
 }
 
 .container {
-  max-width: 980px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -40,10 +39,14 @@ a {
   @include respond(pad) {
     max-width: 660px;
   }
+
+  @include respond(pc) {
+    max-width: 980px;
+  }
 }
 
 .main {
-  padding: 10px 0;
+  padding: 87px 0 10px;
   background: #efefef;
   min-height: calc(100vh - 216px);
 
@@ -64,6 +67,18 @@ h4,
 h5,
 h6 {
   color: #313438;
+}
+
+h1 {
+  font-size: 1.8em;
+
+  @include respond(pad) {
+    font-size: 2em;
+  }
+
+  @include respond(pc) {
+    font-size: 2em;
+  }
 }
 
 .iconfont {

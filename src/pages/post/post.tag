@@ -1,14 +1,14 @@
 <post>
   <page-head></page-head>
   <main class="main">
-    <div class="container">
+    <div class="container post-container">
       <div class="post-content">
         <article class="post-main markdown-body" id="markdownBody">
           <loading show="{ showLoading }"></loading>
         </article>
-        <div class="post-footer">
+        <!-- <div class="post-footer">
           <comment></comment>
-        </div>
+        </div> -->
       </div>
     </div>
   </main>
