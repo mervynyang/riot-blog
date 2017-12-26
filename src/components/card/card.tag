@@ -7,12 +7,12 @@
       </div>
     </a>
     <a class="card-img-wrap" if="{ opts.post.cover !== '' }" href="{ url + post.uuid }">
-      <img src="https://picsum.photos/300/300" alt="">
+      <img src="{ opts.post.cover }" alt="">
       <div class="card-img-title">{ opts.post.title }</div>
     </a>
     <div class="card-footer">
       <time>{ opts.post.publish_at }</time>
-      <span class="tag"><i class="iconfont icon-label_fill"></i>{ opts.post.category_name }</span>
+      <span class="tag"><i class="iconfont icon-label_fill"></i>{ opts.post.tags }</span>
     </div>
   </article>
 

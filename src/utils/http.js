@@ -20,7 +20,7 @@ function getUrl(path, params) {
     return path + serialiseObject(params)
   }
 
-  const defaultDomain = env.isProduction ? 'http://yangwenyou.cn/' : '/'
+  const defaultDomain = env.isProduction ? 'http://119.29.244.45/' : '/'
 
   return defaultDomain + path + serialiseObject(params)
 }

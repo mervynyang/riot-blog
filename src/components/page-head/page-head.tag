@@ -3,10 +3,10 @@
     <div class="container">
       <div class="page-banner">
         <h1 class="page-title">
-        世界尽头与冷酷仙境
+          <a href="/">世界尽头与冷酷仙境</a>
         </h1>
         <div class="page-description">
-          A hipster grid based tumblr theme
+          世界の終りとハードボイルド・ワンダーランド
         </div>
       </div>
       <ul class="page-nav">

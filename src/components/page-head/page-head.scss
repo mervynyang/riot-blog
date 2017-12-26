@@ -15,7 +15,8 @@
     font-size: 1.2em;
 
     @include respond(pad) {
-      display: none;
+      display: block;
+      font-size: 1.6em;
     }
 
     @include respond(pc) {
@@ -41,7 +42,7 @@
   display: none;
 
   @include respond(pad) {
-    display: block;
+    display: none;
   }
 
   @include respond(pc) {
@@ -77,6 +78,10 @@
   overflow: hidden;
   transition: max-height 500ms;
   max-height: 0;
+
+  @include respond(pad) {
+    top: 158px;
+  }
 
   li {
     display: block;
