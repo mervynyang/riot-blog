@@ -20,7 +20,7 @@ function getUrl(path, params) {
     return path + serialiseObject(params)
   }
 
-  const defaultDomain = env.isProduction ? 'http://119.29.244.45/' : '/'
+  const defaultDomain = env.isProduction ? location.origin + '/' : '/'
 
   return defaultDomain + path + serialiseObject(params)
 }

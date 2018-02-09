@@ -40,6 +40,9 @@ class Storage {
   }
 }
 
+// 全局变量
+window.external = window.external || {}
+
 const local = new Storage('localStorage')
 const session = new Storage('sessionStorage')
 const external = new Storage('external') // js全局变量中
