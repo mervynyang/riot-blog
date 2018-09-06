@@ -23,3 +23,5 @@ npm run dumb [component-name]
 # create smart templates
 npm run smart [page-name]
 ```
+
+[Display_Text](http://example.com/)
